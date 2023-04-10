@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GlushkovCinemaApp.MoviesEditPage" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Placeholder="Введите код фильма" x:Name="idEntry"></Entry>
+            <Entry Placeholder="Введите название фильма" x:Name="nameEntry"></Entry>
+            <Entry Placeholder="Введите длину фильма" x:Name="lenghtEntry"></Entry>
+            <Entry Placeholder="Введите кинокомпанию" x:Name="companyEntry"></Entry>
+            <Button Text="Сохранить" x:Name="BtnSave" Clicked="BtnSave_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

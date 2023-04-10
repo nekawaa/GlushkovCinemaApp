@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GlushkovCinemaApp.AuthPage" BackgroundColor="#1c1b1b">
+    <ContentPage.Content>
+
+        <StackLayout HorizontalOptions="CenterAndExpand" WidthRequest="300">
+            <Image Source="pngwing.png"></Image>
+            <Label Text="GigaCinema" FontAttributes="Bold" FontSize="29" HorizontalOptions="Center" TextColor="#ff2e46"></Label>
+            <Entry Margin="10" Placeholder="Логин" PlaceholderColor="#ff2e46" TextColor="#ff2e46" x:Name="EntryLogin"></Entry>
+            <Entry Margin="10" IsPassword="True" Placeholder="Пароль" PlaceholderColor="#ff2e46" TextColor="#ff2e46" x:Name="EntryPassword"></Entry>
+            <Button Margin="10" CornerRadius="25" BackgroundColor="#3d3b3b" x:Name="LoginBtn" Clicked="LoginBtn_Clicked" Text="Войти"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

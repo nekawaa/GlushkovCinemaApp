@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GlushkovCinemaApp.MainPage" BackgroundColor="#1c1b1b">
+
+    <StackLayout WidthRequest="300" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="#1c1b1b">
+        <Image Margin="20" Source="pngwing.png"></Image>
+        <Button CornerRadius="25" BackgroundColor="#3d3b3b" Text="Фильмы" x:Name="FilmsBtn" Clicked="FilmsBtn_Clicked" ></Button>
+        <Button CornerRadius="25" BackgroundColor="#3d3b3b" Text="Билеты" x:Name="TicketsBtn" Clicked="TicketsBtn_Clicked" ></Button>
+        <Button CornerRadius="25" BackgroundColor="#3d3b3b" Text="Заказы" x:Name="OrdersBtn" Clicked="OrdersBtn_Clicked" ></Button>
+    </StackLayout>
+
+</ContentPage>

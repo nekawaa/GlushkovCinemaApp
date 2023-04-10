@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GlushkovCinemaApp.FilmsPage" Appearing="ContentPage_Appearing">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="LVData" HasUnevenRows="True" BackgroundColor="#1c1b1b">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout Grid.Column="0">
+                                    <Label FontAttributes="Italic" TextColor="#ff2e46">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="Код фильма: "/>
+                                                    <Span Text="{Binding idMovie}"/>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontAttributes="Italic" TextColor="#ff2e46">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="Название фильма: "/>
+                                                    <Span Text="{Binding movieName}"/>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontAttributes="Italic" TextColor="#ff2e46">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="Длина фильма: "/>
+                                                    <Span Text="{Binding movieLenght}"/>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label FontAttributes="Italic" TextColor="#ff2e46">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <FormattedString.Spans>
+                                                    <Span Text="Кинокомпания: "/>
+                                                    <Span Text="{Binding filmCompany}"/>
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Button HeightRequest="37" BackgroundColor="#3d3b3b" CornerRadius="30" Text="Редактировать" x:Name="BtnEd" Clicked="BtnEd_Clicked"></Button>
+                                    <Button HeightRequest="37" BackgroundColor="#3d3b3b" CornerRadius="30" Text="Удалить" x:Name="BtnDel" Clicked="BtnDel_Clicked"></Button>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Добавить" x:Name="BtnAdd" BackgroundColor="#3d3b3b" Clicked="BtnAdd_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
