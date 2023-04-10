@@ -1,18 +1,116 @@
 using GlushkovCinemaApp;
-using GlushkovCinemaApp.Classes;
-using Newtonsoft.Json;
-using System.Net;
-using Xamarin.Forms;
 
 namespace TestProject
 {
-    [TestClass]
-    public class UnitTest1
+    public class Tests
     {
-      //€ ебал юнит тесты, ниху€ не понимаю, 0 пар по этой теме, 0 практик, 0 объ€снений, каким хуем € должен самосто€тельно ху€чить юнит тесты к методам которые пизданутьс€ сложнее чем базовыые - не пон€тно.
-      //все мои попытки что-либо сделать здесь окончились провалом, врем€ 3:30 сука, € тер€ю рассудок, т.к спал по 2 часа в течении 2 недель, все это из-за курсача.
-      //спасибо хоть стресс тесты сделал.
-      //помогите...
-      //
+        [SetUp]
+        public void Setup()
+        {
+        }
+
+        [Test]
+        public async Task Auth1()
+        {
+            var ex = new List<Users> { new Users { password = "11", username = "failure" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth2()
+        {
+            var ex = new List<Users> { new Users { password = "111", username = "admin" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(true));
+        }
+        [Test]
+        public async Task Auth3()
+        {
+            var ex = new List<Users> { new Users { password = "1", username = "54" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth4()
+        {
+            var ex = new List<Users> { new Users { password = "121", username = "ex" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth5()
+        {
+            var ex = new List<Users> { new Users { password = "134", username = "fa" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth6()
+        {
+            var ex = new List<Users> { new Users { password = "211", username = "ure" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth7()
+        {
+            var ex = new List<Users> { new Users { password = "411", username = "lure" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth8()
+        {
+            var ex = new List<Users> { new Users { password = "6711", username = "ahah" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth9()
+        {
+            var ex = new List<Users> { new Users { password = "234", username = "testing is fun :^)" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth10()
+        {
+            var ex = new List<Users> { new Users { password = "11234", username = "e34" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth11()
+        {
+            var ex = new List<Users> { new Users { password = "151", username = "211" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth12()
+        {
+            var ex = new List<Users> { new Users { password = "1432", username = "f234i" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth13()
+        {
+            var ex = new List<Users> { new Users { password = "user1", username = "user1" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(true));
+        }
+        [Test]
+        public async Task Auth14()
+        {
+            var ex = new List<Users> { new Users { password = "12341", username = "fa2134" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth15()
+        {
+            var ex = new List<Users> { new Users { password = "1ww1", username = "fgfh" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth16()
+        {
+            var ex = new List<Users> { new Users { password = "osujdayu", username = "vtornikkk" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+        [Test]
+        public async Task Auth17()
+        {
+            var ex = new List<Users> { new Users { password = "xd", username = "xdddddd" } };
+            Assert.That(await AuthPage.UserPost(ex[0]), Is.EqualTo(false));
+        }
+
     }
 }
