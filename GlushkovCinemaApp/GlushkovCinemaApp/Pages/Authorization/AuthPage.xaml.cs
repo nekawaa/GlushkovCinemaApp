@@ -40,7 +40,7 @@ namespace GlushkovCinemaApp
             }
         }
 
-        private async Task<bool> UserPost(Users user)
+        public static async Task<bool> UserPost(Users user)
         {
             using (HttpClient client = new HttpClient())
             {
